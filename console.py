@@ -297,12 +297,12 @@ class HBNBCommand(cmd.Cmd):
 
             args = [att_name, att_val]
 
-        # retrieve dictionary of current objects
+        # retrieves a dictionary of current objects
         new_dict = storage.all()[key]
 
-        # iterate through attr names and values
+        # iterates through attr names and values
         for i, att_name in enumerate(args):
-            # block only runs on even iterations
+            # blocks only runs on even iterations
             if (i % 2 == 0):
                 att_val = args[i + 1]  # following item is value
                 if not att_name:  # check for att_name
